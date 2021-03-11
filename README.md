@@ -110,6 +110,7 @@ Class | Method | HTTP request | Description
 *EntitiesApi* | [**getEntitiesGet**](docs/Api/EntitiesApi.md#getentitiesget) | **GET** /entities/{entityId} | Entities: Get
 *EntitiesApi* | [**getEntitiesList**](docs/Api/EntitiesApi.md#getentitieslist) | **GET** /entities | Entities: List
 *EntitiesCreateApi* | [**entitiesCreateLocation**](docs/Api/EntitiesCreateApi.md#entitiescreatelocation) | **POST** /accounts/{accountId}/entities | Entities: Create (Location)
+*EntitiesDeleteApi* | [**entitiesDelete**](docs/Api/EntitiesDeleteApi.md#entitiesdelete) | **DELETE** /accounts/{accountId}/entities/{entityId} | Entities: Delete
 *EntitiesGetApi* | [**entitiesGet**](docs/Api/EntitiesGetApi.md#entitiesget) | **GET** /accounts/{accountId}/entities/{entityId} | Entities: Get
 *EntitiesGetApi* | [**entitiesList**](docs/Api/EntitiesGetApi.md#entitieslist) | **GET** /accounts/{accountId}/entities | Entities: List
 *EntitiesUpdateApi* | [**entitiesUpdateLocation**](docs/Api/EntitiesUpdateApi.md#entitiesupdatelocation) | **PUT** /accounts/{accountId}/entities/{entityId} | Entities: Update (Location)
@@ -180,6 +181,10 @@ Class | Method | HTTP request | Description
 *PowerListings_Api* | [**publisherSuggestionsList**](docs/Api/PowerListings_Api.md#publishersuggestionslist) | **GET** /accounts/{accountId}/powerlistings/publishersuggestions | Publisher Suggestions: List
 *PowerListings_Api* | [**publisherSuggestionsUpdate**](docs/Api/PowerListings_Api.md#publishersuggestionsupdate) | **PUT** /accounts/{accountId}/powerlistings/publishersuggestions/{suggestionId} | Publisher Suggestions: Update
 *PowerListings_Api* | [**publishersList**](docs/Api/PowerListings_Api.md#publisherslist) | **GET** /accounts/{accountId}/powerlistings/publishers | Publishers: List
+*PowerListings_Api* | [**verificationComplete**](docs/Api/PowerListings_Api.md#verificationcomplete) | **POST** /{accountId}/listings/verifications/{publisherId}/complete | Verification Complete
+*PowerListings_Api* | [**verificationInitiate**](docs/Api/PowerListings_Api.md#verificationinitiate) | **POST** /{accountId}/listings/verifications/{publisherId}/{locale}/initiate | Verification Initiate
+*PowerListings_Api* | [**verificationMethodsList**](docs/Api/PowerListings_Api.md#verificationmethodslist) | **GET** /accounts/{accountId}/listings/verifications/{publisherId}/{locale}/methods | Verification Methods List
+*PowerListings_Api* | [**verificationStatusesList**](docs/Api/PowerListings_Api.md#verificationstatuseslist) | **GET** /accounts/{accountId}/listings/verifications/{publisherId}/statuses | Verification Statuses List
 *ReviewsApi* | [**commentCreate**](docs/Api/ReviewsApi.md#commentcreate) | **POST** /accounts/{accountId}/reviews/{reviewId}/comments | Comment: Create
 *ReviewsApi* | [**reviewGenerationSettingsGet**](docs/Api/ReviewsApi.md#reviewgenerationsettingsget) | **GET** /accounts/{accountId}/reviews/settings/generation | Review Generation Settings: Get
 *ReviewsApi* | [**reviewGenerationSettingsUpdate**](docs/Api/ReviewsApi.md#reviewgenerationsettingsupdate) | **POST** /accounts/{accountId}/reviews/settings/generation | Review Generation Settings: Update
@@ -305,6 +310,8 @@ Class | Method | HTTP request | Description
  - [UsersUpdatePasswordRequest](docs/Model/UsersUpdatePasswordRequest.md)
  - [UsersUpdateRequest](docs/Model/UsersUpdateRequest.md)
  - [Validation](docs/Model/Validation.md)
+ - [VerificationCompleteRequest](docs/Model/VerificationCompleteRequest.md)
+ - [VerificationInitiateRequest](docs/Model/VerificationInitiateRequest.md)
  - [WalkableCoordinate](docs/Model/WalkableCoordinate.md)
  - [WebsiteUrl](docs/Model/WebsiteUrl.md)
  - [YextDisplayCoordinate](docs/Model/YextDisplayCoordinate.md)

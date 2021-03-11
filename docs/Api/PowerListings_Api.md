@@ -15,6 +15,10 @@ Method | HTTP request | Description
 [**publisherSuggestionsList**](PowerListings_Api.md#publisherSuggestionsList) | **GET** /accounts/{accountId}/powerlistings/publishersuggestions | Publisher Suggestions: List
 [**publisherSuggestionsUpdate**](PowerListings_Api.md#publisherSuggestionsUpdate) | **PUT** /accounts/{accountId}/powerlistings/publishersuggestions/{suggestionId} | Publisher Suggestions: Update
 [**publishersList**](PowerListings_Api.md#publishersList) | **GET** /accounts/{accountId}/powerlistings/publishers | Publishers: List
+[**verificationComplete**](PowerListings_Api.md#verificationComplete) | **POST** /{accountId}/listings/verifications/{publisherId}/complete | Verification Complete
+[**verificationInitiate**](PowerListings_Api.md#verificationInitiate) | **POST** /{accountId}/listings/verifications/{publisherId}/{locale}/initiate | Verification Initiate
+[**verificationMethodsList**](PowerListings_Api.md#verificationMethodsList) | **GET** /accounts/{accountId}/listings/verifications/{publisherId}/{locale}/methods | Verification Methods List
+[**verificationStatusesList**](PowerListings_Api.md#verificationStatusesList) | **GET** /accounts/{accountId}/listings/verifications/{publisherId}/statuses | Verification Statuses List
 
 
 # **duplicatesCreate**
@@ -609,6 +613,226 @@ Name | Type | Description  | Notes
  **v** | **string**|  |
  **subset** | **string**|  |
  **account_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **verificationComplete**
+> verificationComplete($api_key, $v, $content_type, $body, $account_id, $publisher_id)
+
+Verification Complete
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\Api\PowerListings_Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$api_key = "api_key_example"; // string | 
+$v = "v_example"; // string | 
+$content_type = "content_type_example"; // string | 
+$body = array(new \Swagger\Client\Model\VerificationCompleteRequest()); // \Swagger\Client\Model\VerificationCompleteRequest[] | 
+$account_id = "account_id_example"; // string | 
+$publisher_id = "publisher_id_example"; // string | 
+
+try {
+    $apiInstance->verificationComplete($api_key, $v, $content_type, $body, $account_id, $publisher_id);
+} catch (Exception $e) {
+    echo 'Exception when calling PowerListings_Api->verificationComplete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **api_key** | **string**|  |
+ **v** | **string**|  |
+ **content_type** | **string**|  |
+ **body** | [**\Swagger\Client\Model\VerificationCompleteRequest[]**](../Model/VerificationCompleteRequest.md)|  |
+ **account_id** | **string**|  |
+ **publisher_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **verificationInitiate**
+> verificationInitiate($api_key, $v, $content_type, $body, $account_id, $publisher_id, $locale)
+
+Verification Initiate
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\Api\PowerListings_Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$api_key = "api_key_example"; // string | 
+$v = "v_example"; // string | 
+$content_type = "content_type_example"; // string | 
+$body = array(new \Swagger\Client\Model\VerificationInitiateRequest()); // \Swagger\Client\Model\VerificationInitiateRequest[] | 
+$account_id = "account_id_example"; // string | 
+$publisher_id = "publisher_id_example"; // string | 
+$locale = "locale_example"; // string | 
+
+try {
+    $apiInstance->verificationInitiate($api_key, $v, $content_type, $body, $account_id, $publisher_id, $locale);
+} catch (Exception $e) {
+    echo 'Exception when calling PowerListings_Api->verificationInitiate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **api_key** | **string**|  |
+ **v** | **string**|  |
+ **content_type** | **string**|  |
+ **body** | [**\Swagger\Client\Model\VerificationInitiateRequest[]**](../Model/VerificationInitiateRequest.md)|  |
+ **account_id** | **string**|  |
+ **publisher_id** | **string**|  |
+ **locale** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **verificationMethodsList**
+> verificationMethodsList($api_key, $v, $account_id, $publisher_id, $locale)
+
+Verification Methods List
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\Api\PowerListings_Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$api_key = "api_key_example"; // string | 
+$v = "v_example"; // string | 
+$account_id = "account_id_example"; // string | 
+$publisher_id = "publisher_id_example"; // string | 
+$locale = "locale_example"; // string | 
+
+try {
+    $apiInstance->verificationMethodsList($api_key, $v, $account_id, $publisher_id, $locale);
+} catch (Exception $e) {
+    echo 'Exception when calling PowerListings_Api->verificationMethodsList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **api_key** | **string**|  |
+ **v** | **string**|  |
+ **account_id** | **string**|  |
+ **publisher_id** | **string**|  |
+ **locale** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **verificationStatusesList**
+> verificationStatusesList($api_key, $v, $account_id, $publisher_id)
+
+Verification Statuses List
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\Api\PowerListings_Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$api_key = "api_key_example"; // string | 
+$v = "v_example"; // string | 
+$account_id = "account_id_example"; // string | 
+$publisher_id = "publisher_id_example"; // string | 
+
+try {
+    $apiInstance->verificationStatusesList($api_key, $v, $account_id, $publisher_id);
+} catch (Exception $e) {
+    echo 'Exception when calling PowerListings_Api->verificationStatusesList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **api_key** | **string**|  |
+ **v** | **string**|  |
+ **account_id** | **string**|  |
+ **publisher_id** | **string**|  |
 
 ### Return type
 
